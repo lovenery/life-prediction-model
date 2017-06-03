@@ -1,11 +1,12 @@
 import numpy as np
 from flask import Flask, abort, jsonify, request, render_template
-import cPickle as pickle
+import pickle
 import os.path as path
 from os import environ
 
 output_file = path.join(path.dirname(__file__), './rfc.pkl')
-rfc = pickle.load(open(output_file, "rb"))
+rfc = pickle.load(open(output_file,"rb")) # python2
+# rfc = pickle.load(open(output_file,"rb"), encoding='latin1') # python3
 
 app = Flask(__name__)
 
