@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
-import cPickle as pickle
+import pickle
 
 # Read CSV
 df = pd.read_csv(path.join(path.dirname(__file__), './data/result.csv'))
@@ -27,7 +27,7 @@ rfc = RandomForestClassifier(n_estimators=10, n_jobs=2)
 rfc.fit(X_train, y_train)
 
 # Test
-print "Accuracy = %0.3f" % accuracy_score(y_test, rfc.predict(X_test))
+# print "Accuracy = %0.3f" % accuracy_score(y_test, rfc.predict(X_test))
 # print classification_report(y_test, rfc.predict(X_test))
 # print rfc.predict([[133, 1, 31]]) # 16
 # for i in range(1, 42):
