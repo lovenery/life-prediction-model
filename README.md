@@ -1,6 +1,6 @@
 # Life Prediction Model
 
-## ENV
+## Env
 
 - python 2.7
 
@@ -15,14 +15,16 @@ python data/2-itertuples.py
 
 # join data
 python data/3-county.py
+
+# make model, output file: *.pkl
+python model.py
 ```
 
-## Run
+## Development
 
 ```shell
-# make model, output file: rfc.pkl
-python model.py
-
-# run web service
+virtualenv venv
+. venv/bin/activate
+pip install -r requirements.txt
 python web/main.py
 ```
