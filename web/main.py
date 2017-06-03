@@ -2,8 +2,9 @@ import numpy as np
 from flask import Flask, abort, jsonify, request, render_template
 import cPickle as pickle
 import os.path as path
+from os import environ
 
-output_file = path.join(path.dirname(__file__), '../rfc.pkl')
+output_file = path.join(path.dirname(__file__), './rfc.pkl')
 rfc = pickle.load(open(output_file, "rb"))
 
 app = Flask(__name__)
@@ -33,4 +34,5 @@ def make_predict():
     return jsonify(y_hat.tolist()) # can't return numpy array
 
 if __name__ == '__main__':
-    app.run(port = 5000, debug = True)
+    port = int(environ.get("PORT", 5000))
+    app.run(port = port, debug = True)
