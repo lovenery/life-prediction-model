@@ -3,7 +3,7 @@
         "header": "死亡年齡預測模型",
         "refresh": "重新整理",
         "cache": "清除緩存",
-        "github": "原始碼"
+        "github": "Bug回報"
     },
     "footer": {
         "header": "分析台灣各大死因之死亡年齡",
