@@ -20,7 +20,7 @@ label_column_name = ['age']
 X = df[feature_column_name].as_matrix()
 y = df[label_column_name].as_matrix()
 y = y.ravel() # y.ravel() or y.flatten() or y.reshape(y.shape[0],)
-X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.0077, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.005, random_state=0)
 
 # Model
 rfc = RandomForestClassifier(n_estimators=10, n_jobs=2)
@@ -34,5 +34,5 @@ print "Accuracy = %0.3f" % accuracy_score(y_test, rfc.predict(X_test))
 #     print i, rfc.predict([[133, 1, i]])
 
 # Output
-output_file = path.join(path.dirname(__file__), './rfc.pkl')
+output_file = path.join(path.dirname(__file__), './web/rfc.pkl')
 pickle.dump(rfc, open(output_file, "wb"))
