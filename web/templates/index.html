@@ -1,0 +1,71 @@
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<div class="card-panel">
+<form class="col s12">
+    <div class="row">
+        <div class="col s12">
+            <label for="gender"><span id="i18n-index-gender"></span>：</label>
+            <p>
+                <input name="gender" class="with-gap" type="radio" id="male" value="1">
+                <label for="male"><span id="i18n-index-male"></span></label>
+            </p>
+            <p>
+                <input name="gender" class="with-gap" type="radio" id="female" value="2">
+                <label for="female"><span id="i18n-index-female"></span></label>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <select id="county">
+                <option value="" disabled selected>&#8709;</option>
+            </select>
+            <label for="county"><span id="i18n-index-location"></span>：</label>
+        </div>
+        <div class="input-field col s12">
+            <button id="submit" class="waves-effect waves-light btn right" disabled>
+                <span id="i18n-index-submit"></span><i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+</form>
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <table class="striped centered hidden" id="table">
+            <thead>
+                <tr>
+                    <th><span id="i18n-index-id"></span></th>
+                    <th><span id="i18n-index-cause"></span></th>
+                    <th><span id="i18n-index-life"></span></th>
+                    <th><span id="i18n-index-icd"></span></th>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="section center loading">
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+            <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+            </div><div class="circle-clipper right">
+            <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="static/tables/age.js"></script>
+<script src="static/tables/cause.js"></script>
+<script src="static/tables/county.js"></script>
+<script src="static/index.js"></script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{
+    "nav": {
+        "header": "Life Prediction Model",
+        "refresh": "Refresh",
+        "cache": "Clear Cache",
+        "github": "Source Code"
+    },
+    "footer": {
+        "header": "Analyze your life by cause in Taiwan",
+        "text": "Using simple Classifiers to analyze length of life base on sex and location.",
+        "refs": "References",
+        "link": "data.gov.tw",
+        "github": "Source Code"
+    },
+    "index": {
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "location": "Location",
+        "submit": "Submit",
+        "id": "id",
+        "cause": "Cause",
+        "life": "Life",
+        "icd": "ICD-10"
+    }
+}
