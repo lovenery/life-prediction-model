@@ -26,5 +26,7 @@ python model.py
 virtualenv venv
 . venv/bin/activate
 pip install -r requirements.txt
+python model.py
+export PORT=5000
 python web/main.py
 ```
